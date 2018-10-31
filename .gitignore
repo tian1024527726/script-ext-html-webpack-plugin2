@@ -1,0 +1,6 @@
+
+/node_modules/
+/dynavers_modules/
+/dist/
+/issue/
+yarn.lock

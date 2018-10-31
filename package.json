@@ -1,0 +1,59 @@
+{
+  "name": "script-ext-html-webpack-plugin2",
+  "version": "0.0.1",
+  "description": "Enhances html-webpack-plugin functionality by enabling inline scripts.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib/"
+  ],
+  "scripts": {
+    "pretest": "semistandard & install-module-versions dynavers.json",
+    "test": "VERSION=webpack1 jasmine && VERSION=webpack2 jasmine && VERSION=webpack3 jasmine",
+    "test:webpack1": "VERSION=webpack1 jasmine",
+    "test:webpack2": "VERSION=webpack2 jasmine",
+    "test:webpack3": "VERSION=webpack3 jasmine",
+    "test:core": "VERSION=webpack3 jasmine ./spec/core-spec.js",
+    "test:css-reg-exp": "VERSION=webpack3 jasmine ./spec/css-reg-exp-spec.js",
+    "test:set-position-spec": "VERSION=webpack3 jasmine ./spec/set-position-spec.js",
+    "node-debug": "DEBUG=StyleExt VERSION=webpack2 node-debug jasmine",
+    "debug": "DEBUG=StyleExt VERSION=webpack2 jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tian1024527726/script-ext-html-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html-webpack-plugin",
+    "extract-text-webpack-plugin",
+    "inline scripts",
+    "internal scripts",
+    "script"
+  ],
+  "author": "yanyibo <tian1024527726@163.com> (https://github.com/tian1024527726)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tian1024527726/script-ext-html-webpack-plugin"
+  },
+  "homepage": "https://github.com/tian1024527726/script-ext-html-webpack-plugin",
+  "devDependencies": {
+    "babel-loader": "^8.0.4",
+    "denodeify": "^1.2.1",
+    "dynavers": "^0.2.0",
+    "fs-temp": "^1.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "jasmine": "^2.9.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine2-custom-message": "^0.8.4",
+    "ncp": "^2.0.0",
+    "postcss-spiffing": "0.1.0",
+    "rimraf": "^2.6.2",
+    "semistandard": "^12.0.0"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "uglify-js": "^3.3.7"
+  }
+}
